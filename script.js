@@ -9,30 +9,84 @@
 
     // 60 days of progressive challenges
     const challenges = [
-      // Week 1 - Awareness
-      { day: 1, title: "Track Your Screen Time", desc: "Simply notice how often you reach for your phone today." },
-      { day: 2, title: "No Phone First Hour", desc: "Avoid screens for the first hour after waking up." },
-      { day: 3, title: "Delete One App", desc: "Remove one social/media app you use mindlessly." },
-      { day: 4, title: "Read 5 Pages", desc: "Read 5 pages of any physical book today." },
-      { day: 5, title: "10 Minute Walk", desc: "Take a 10-minute walk without your phone." },
-      { day: 6, title: "Meal Without Screens", desc: "Have one meal today without any screens." },
-      { day: 7, title: "Digital Sunset", desc: "Turn off screens 1 hour before bedtime." },
-      
-      // Week 2 - Small Changes
-      { day: 8, title: "Notification Fast", desc: "Turn off all non-essential notifications today." },
-      { day: 9, title: "Single-Task Focus", desc: "Do one activity at a time (no multitasking) for 2 hours." },
-      { day: 10, title: "Phone-Free Space", desc: "Choose one room where phones aren't allowed today." },
-      { day: 11, title: "15 Minute Read", desc: "Read for 15 continuous minutes today." },
-      { day: 12, title: "Nature Break", desc: "Spend 15 minutes outside in nature." },
-      { day: 13, title: "Conversation Challenge", desc: "Have one face-to-face conversation >10 minutes." },
-      { day: 14, title: "Full Digital Sunset", desc: "No screens after 8pm tonight." },
-      
-      // Weeks 3-8 - Progressive challenges...
-      // (In a real implementation, I'd include all 60 challenges here)
-      
-      // Day 60 - Final Challenge
-      { day: 60, title: "Digital Sabbath", desc: "Go 24 hours without any recreational screen use." }
-    ];
+  // Week 1 - Awareness (Easiest)
+  { day: 1, title: "Track Your Screen Time", desc: "Simply notice how often you reach for your phone today." },
+  { day: 2, title: "No Phone First Hour", desc: "Avoid non-essential screens for the first hour after waking up." },
+  { day: 3, title: "Mindful Usage", desc: "Identify the most addictive app on your device and restrict it for today." },
+  { day: 4, title: "Read 5 Pages", desc: "Read 5 pages of any physical book today." },
+  { day: 5, title: "10 Minute Walk", desc: "Take a 10-minute walk without your phone." },
+  { day: 6, title: "Meal Without Screens", desc: "Have one meal today without any screens." },
+  { day: 7, title: "Digital Sunset", desc: "Turn off screens 1 hour before bedtime." },
+  
+  // Week 2 - Small Changes
+  { day: 8, title: "Notification Fast", desc: "Turn off all non-essential notifications today." },
+  { day: 9, title: "Single-Task Focus", desc: "Do one activity at a time (no multitasking) for 2 hours." },
+  { day: 10, title: "Phone-Free Space", desc: "Choose one room where phones aren't allowed today." },
+  { day: 11, title: "15 Minute Read", desc: "Read for 15 continuous minutes today." },
+  { day: 12, title: "Nature Break", desc: "Spend 15 minutes outside in nature without devices." },
+  { day: 13, title: "Conversation Challenge", desc: "Have one face-to-face conversation >10 minutes without phone checks." },
+  { day: 14, title: "Full Digital Sunset", desc: "No screens after 8pm tonight." },
+  
+  // Week 3 - Building Focus
+  { day: 15, title: "Morning Focus Block", desc: "90 minutes of deep work with no distractions first thing." },
+  { day: 16, title: "App Purge", desc: "Delete 3 time-wasting apps from your phone." },
+  { day: 17, title: "Digital Minimalism", desc: "Remove all non-essential apps from your home screen." },
+  { day: 18, title: "30 Minute Read", desc: "Read for 30 continuous minutes today." },
+  { day: 19, title: "Full Work Focus", desc: "Work in 45-minute blocks with 15-minute breaks (Pomodoro)." },
+  { day: 20, title: "Social Media Fast", desc: "No social media for the entire day." },
+  { day: 21, title: "Tech Sabbath Prep", desc: "Prepare for a full day without tech tomorrow." },
+  
+  // Week 4 - Intermediate Focus
+  { day: 22, title: "Tech Sabbath", desc: "No recreational technology for 24 hours." },
+  { day: 23, title: "Email Windows", desc: "Check email only at 11am and 4pm today." },
+  { day: 24, title: "Deep Work Session", desc: "2 hours of uninterrupted focused work." },
+  { day: 25, title: "Analog Hobby", desc: "Spend 1 hour on a non-digital hobby (drawing, music, crafting)." },
+  { day: 26, title: "Silent Mode", desc: "Keep phone on silent/airplane mode when not in active use." },
+  { day: 27, title: "Full Presence", desc: "No phone during all social interactions today." },
+  { day: 28, title: "Digital Declutter", desc: "Organize and minimize your digital files/emails." },
+  
+  // Week 5 - Advanced Focus
+  { day: 29, title: "Morning Deep Dive", desc: "3 hours of deep work before lunch." },
+  { day: 30, title: "No YouTube/Streaming", desc: "Avoid all video content today." },
+  { day: 31, title: "Single Device", desc: "Use only one device all day (phone OR computer)." },
+  { day: 32, title: "Book Chapter", desc: "Read a full chapter of a book today." },
+  { day: 33, title: "Nature Immersion", desc: "2 hours in nature without any devices." },
+  { day: 34, title: "Full Workday Focus", desc: "Pomodoro method all workday (25/5 intervals)." },
+  { day: 35, title: "Digital Minimalist", desc: "Only use tech for essential tasks today." },
+  
+  // Week 6 - Expert Focus
+  { day: 36, title: "No Smartphone", desc: "Use only a computer (or dumbphone) today." },
+  { day: 37, title: "Deep Work Marathon", desc: "4 hours of uninterrupted focused work." },
+  { day: 38, title: "Analog Day", desc: "Use paper for all notes and planning today." },
+  { day: 39, title: "Silent Retreat", desc: "2 hours of complete silence (no audio input)." },
+  { day: 40, title: "Full Presence Day", desc: "Be completely present in every activity today." },
+  { day: 41, title: "Digital Fasting", desc: "12 hours without any digital devices." },
+  { day: 42, title: "Mindful Consumption", desc: "Only consume high-quality, intentional content." },
+  
+  // Week 7 - Master Level
+  { day: 43, title: "Monk Mode Morning", desc: "4 hours of deep work before lunch." },
+  { day: 44, title: "Essential Apps Only", desc: "Use only 5 core apps all day." },
+  { day: 45, title: "Full Analog Workday", desc: "Complete your work without digital tools where possible." },
+  { day: 46, title: "Book Sprint", desc: "Read 100 pages today." },
+  { day: 47, title: "Nature Retreat", desc: "4 hours in nature without technology." },
+  { day: 48, title: "Silent Workday", desc: "No music/podcasts while working today." },
+  { day: 49, title: "Digital Minimalism", desc: "Only 30 minutes of leisure screen time today." },
+  
+  // Week 8 - Extreme Focus
+  { day: 50, title: "Deep Work Immersion", desc: "6 hours of uninterrupted focused work." },
+  { day: 51, title: "No Internet", desc: "Work offline all day (download what you need)." },
+  { day: 52, title: "Analog Weekend", desc: "No digital entertainment all weekend." },
+  { day: 53, title: "Full Chapter Book", desc: "Read an entire short book today." },
+  { day: 54, title: "Wilderness Day", desc: "Full day outdoors without technology." },
+  { day: 55, title: "Silent Sunday", desc: "No spoken or digital communication for 4 hours." },
+  { day: 56, title: "Essential Tech Only", desc: "Use technology only for absolute necessities." },
+  
+  // Final Days - Mastery
+  { day: 57, title: "Monk Mode Day", desc: "8 hours of deep work with scheduled breaks." },
+  { day: 58, title: "Digital Pilgrimage", desc: "24 hours with only communication technology." },
+  { day: 59, title: "Focus Marathon", desc: "Complete your most important project today." },
+  { day: 60, title: "Digital Enlightenment", desc: "Full 24 hours without any recreational technology." }
+];
 
     // Theme toggle functionality
     function toggleTheme() {
